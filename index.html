@@ -357,6 +357,19 @@
       white-space: nowrap;
     }
 
+    .product-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .product-desc {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      line-height: 1.55;
+      max-width: 26ch;
+    }
+
     .category-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -630,7 +643,7 @@
   <main id="top">
     <section class="section hero">
       <div class="hero-media">
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80" alt="Woman with elegant styled hair wearing fashion accessories" />
+        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1400&q=80" alt="Woman with elegant styled hair wearing fashion accessories" />
       </div>
       <div class="hero-copy">
         <p class="eyebrow">Curated for elevated everyday styling</p>
@@ -653,7 +666,11 @@
       </div>
     </section>
 
-    <section class="section" id="bestsellers">
+    <section class="section" style="padding-top: 1.5rem; padding-bottom: 0;">
+      <div style="border:1px solid rgba(10,10,10,0.08); background:#fff; padding:1rem 1.2rem; font-size:0.88rem; color:rgba(10,10,10,0.68);">Product visuals are being curated into individual boutique-style listings. Selected styles are shown as isolated product concepts while the full catalog is being refined.</div>
+    </section>
+
+<section class="section" id="bestsellers">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Most wanted</p>
@@ -665,7 +682,7 @@
       <div class="product-grid">
         <a class="product-card" href="mailto:contact@shopwithnina.uk?subject=Product%20Inquiry">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Blush Chiffon Cascade Bow hair accessory" />
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Blush Chiffon Cascade Bow hair accessory" />
             <div class="quick-view">View Product</div>
           </div>
           <div class="product-info">
@@ -676,18 +693,18 @@
 
         <a class="product-card" href="mailto:contact@shopwithnina.uk?subject=Product%20Inquiry">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Ivory Bridal Tail Bow accessory" />
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80" alt="Ivory Bridal Tail Bow accessory" />
             <div class="quick-view">View Product</div>
           </div>
           <div class="product-info">
-            <h3 class="product-name">Ivory Bridal Tail Bow</h3>
+            <div class="product-copy"><h3 class="product-name">Ivory Bridal Tail Bow</h3><p class="product-desc">Soft ivory bow with elongated tails for polished bridal or ballet styling.</p></div>
             <span class="product-price">$18</span>
           </div>
         </a>
 
         <a class="product-card" href="mailto:contact@shopwithnina.uk?subject=Product%20Inquiry">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Noir Satin Evening Bow for hair styling" />
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80" alt="Noir Satin Evening Bow for hair styling" />
             <div class="quick-view">View Product</div>
           </div>
           <div class="product-info">
@@ -698,7 +715,7 @@
 
         <a class="product-card" href="mailto:contact@shopwithnina.uk?subject=Product%20Inquiry">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Pearl Ballerina Bow Clip fashion accessory" />
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Pearl Ballerina Bow Clip fashion accessory" />
             <div class="quick-view">View Product</div>
           </div>
           <div class="product-info">
@@ -709,7 +726,7 @@
 
         <a class="product-card" href="mailto:contact@shopwithnina.uk?subject=Product%20Inquiry">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80" alt="Champagne Veil Ribbon Bow" />
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80" alt="Champagne Veil Ribbon Bow" />
             <div class="quick-view">View Product</div>
           </div>
           <div class="product-info">
@@ -742,7 +759,7 @@
 
         <a class="product-card" href="mailto:contact@shopwithnina.uk?subject=Product%20Inquiry">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=900&q=80" alt="French Vanilla Bow Barrette accessory" />
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="French Vanilla Bow Barrette accessory" />
             <div class="quick-view">View Product</div>
           </div>
           <div class="product-info">
@@ -752,7 +769,7 @@
         </a>
         <a class="product-card" href="mailto:contact@shopwithnina.uk?subject=Product%20Inquiry">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Petite Pearl Ribbon Set" />
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Petite Pearl Ribbon Set" />
             <div class="quick-view">View Product</div>
           </div>
           <div class="product-info">
@@ -785,7 +802,7 @@
 
         <a class="product-card" href="mailto:contact@shopwithnina.uk?subject=Product%20Inquiry">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Layered Couture Bow" />
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Layered Couture Bow" />
             <div class="quick-view">View Product</div>
           </div>
           <div class="product-info">
@@ -807,7 +824,7 @@
 
       <div class="category-grid">
         <a class="category-card" href="#bestsellers">
-          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" alt="Clips and claws category" />
+          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=80" alt="Clips and claws category" />
           <div class="category-content">
             <span>Category 01</span>
             <h3>Ballet Ribbons</h3>
@@ -816,7 +833,7 @@
         </a>
 
         <a class="category-card" href="#bestsellers">
-          <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=1200&q=80" alt="Bows and ribbons category" />
+          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80" alt="Bows and ribbons category" />
           <div class="category-content">
             <span>Category 02</span>
             <h3>Soft Girl Bows</h3>
@@ -825,7 +842,7 @@
         </a>
 
         <a class="category-card" href="#bestsellers">
-          <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=1200&q=80" alt="Pins and accessories category" />
+          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=80" alt="Pins and accessories category" />
           <div class="category-content">
             <span>Category 03</span>
             <h3>French Hair Details</h3>
