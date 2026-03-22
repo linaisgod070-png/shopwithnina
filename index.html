@@ -641,15 +641,21 @@
   </header>
 
   <main id="top">
-    <section class="section hero">
-      <div class="hero-media">
-        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1400&q=80" alt="Woman with elegant styled hair wearing fashion accessories" />
-      </div>
-      <div class="hero-copy">
-        <p class="eyebrow">Curated for elevated everyday styling</p>
-        <h1>Effortless Style, Every Detail</h1>
-        <p>Modern hair accessories with an editorial edge—minimal silhouettes, luxe textures, and statement finishes designed to move with your every mood.</p>
-        <a href="#bestsellers" class="cta">Shop Now</a>
+    <section class="section" style="padding-bottom:2.5rem;">
+      <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:1rem;align-items:stretch;">
+        <div style="background:#fff;border:1px solid rgba(10,10,10,0.08);padding:3.5rem 3rem;display:flex;flex-direction:column;justify-content:center;min-height:520px;">
+          <p class="eyebrow">Curated bow collection</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.4rem);line-height:0.95;margin-bottom:1.2rem;">Romantic Bows,<br/>Ready to Shop</h1>
+          <p style="max-width:520px;font-size:1rem;color:rgba(10,10,10,0.68);margin-bottom:1.8rem;">A boutique-style edit of ribbon bows, pearl clips, satin tails, and feminine hair details — merchandised as individual products for a cleaner shopping experience.</p>
+          <a href="#bestsellers" class="cta">Shop Now</a>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;min-height:520px;">
+          <div style="background:#fff;border:1px solid rgba(10,10,10,0.08);overflow:hidden;"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Ribbon bow product image" style="height:100%;object-fit:cover;"></div>
+          <div style="display:grid;grid-template-rows:1fr 1fr;gap:1rem;">
+            <div style="background:#fff;border:1px solid rgba(10,10,10,0.08);overflow:hidden;"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80" alt="Hair accessory product image" style="height:100%;object-fit:cover;"></div>
+            <div style="background:#fff;border:1px solid rgba(10,10,10,0.08);overflow:hidden;"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80" alt="Boutique bow product image" style="height:100%;object-fit:cover;"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -819,35 +825,20 @@
           <p class="eyebrow">Browse the edit</p>
           <h2>Shop by Style Mood</h2>
         </div>
-        <p>Intentional styling pieces grouped by texture, shape, and occasion—made for easy layering and a polished finish with minimal effort.</p>
+        <p>Browse product groups directly without model imagery — each section is focused on the accessory itself.</p>
       </div>
-
-      <div class="category-grid">
-        <a class="category-card" href="#bestsellers">
-          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=80" alt="Clips and claws category" />
-          <div class="category-content">
-            <span>Category 01</span>
-            <h3>Ballet Ribbons</h3>
-            <p>Layered ribbon shapes and long tails for soft, romantic styling.</p>
-          </div>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;">
+        <a href="#bestsellers" style="background:#fff;border:1px solid rgba(10,10,10,0.08);padding:2rem;display:block;min-height:180px;">
+          <p class="eyebrow" style="margin-bottom:.6rem;">01</p><h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;">Ballet Ribbons</h3><p style="color:rgba(10,10,10,0.68);font-size:.95rem;line-height:1.7;">Layered tails, satin drape, and delicate feminine volume.</p>
         </a>
-
-        <a class="category-card" href="#bestsellers">
-          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80" alt="Bows and ribbons category" />
-          <div class="category-content">
-            <span>Category 02</span>
-            <h3>Soft Girl Bows</h3>
-            <p>Sweet statement bows in satin, chiffon, and pearl-accent finishes.</p>
-          </div>
+        <a href="#bestsellers" style="background:#fff;border:1px solid rgba(10,10,10,0.08);padding:2rem;display:block;min-height:180px;">
+          <p class="eyebrow" style="margin-bottom:.6rem;">02</p><h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;">Soft Girl Bows</h3><p style="color:rgba(10,10,10,0.68);font-size:.95rem;line-height:1.7;">Powder pinks, cream tones, chiffon layers, and sweet silhouettes.</p>
         </a>
-
-        <a class="category-card" href="#bestsellers">
-          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=80" alt="Pins and accessories category" />
-          <div class="category-content">
-            <span>Category 03</span>
-            <h3>French Hair Details</h3>
-            <p>Polished feminine details that make simple hairstyles feel more dressed up.</p>
-          </div>
+        <a href="#bestsellers" style="background:#fff;border:1px solid rgba(10,10,10,0.08);padding:2rem;display:block;min-height:180px;">
+          <p class="eyebrow" style="margin-bottom:.6rem;">03</p><h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;">Pearl Details</h3><p style="color:rgba(10,10,10,0.68);font-size:.95rem;line-height:1.7;">Pearl-centered bows and polished finishing accents.</p>
+        </a>
+        <a href="#bestsellers" style="background:#fff;border:1px solid rgba(10,10,10,0.08);padding:2rem;display:block;min-height:180px;">
+          <p class="eyebrow" style="margin-bottom:.6rem;">04</p><h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;">Evening Satin</h3><p style="color:rgba(10,10,10,0.68);font-size:.95rem;line-height:1.7;">Dark satin bows and dressed-up statement styles.</p>
         </a>
       </div>
     </section>
