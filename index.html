@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop With Nina – Hair Accessories for Gen Z</title>
+  <meta name="description" content="Trendy hair accessories for Gen Z. Claw clips, scrunchies, Y2K styles and more. Shop With Nina – your go-to for North American hair fashion." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #f5a7c7;
+      --lavender: #c9b8f0;
+      --cream: #fffaf5;
+      --dark: #1a1a2e;
+      --accent: #ff6b9d;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+    .nav-contact a {
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      background: var(--pink);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      transition: background 0.2s;
+    }
+    .nav-contact a:hover { background: var(--accent); color: white; }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #ffe0ef 0%, #e8d5ff 50%, #d5eaff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(255,107,157,0.15) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      border-radius: 50%;
+    }
+    .hero-badge {
+      background: var(--accent);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      color: var(--dark);
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      font-size: 1.15rem;
+      color: #555;
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      padding: 0.85rem 2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(255,107,157,0.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,107,157,0.5); }
+    .btn-secondary {
+      background: white;
+      color: var(--accent);
+      padding: 0.85rem 2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid var(--accent);
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { background: var(--accent); color: white; }
+
+    /* FLOATING EMOJIS */
+    .floaties {
+      position: absolute;
+      font-size: 2.5rem;
+      opacity: 0.18;
+      pointer-events: none;
+      animation: float 6s ease-in-out infinite;
+    }
+    .floaties:nth-child(1) { top: 10%; left: 8%; animation-delay: 0s; }
+    .floaties:nth-child(2) { top: 20%; right: 10%; animation-delay: 1.5s; }
+    .floaties:nth-child(3) { bottom: 20%; left: 12%; animation-delay: 3s; }
+    .floaties:nth-child(4) { bottom: 15%; right: 8%; animation-delay: 4.5s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
+    }
+
+    /* VIBES / CATEGORIES */
+    .section { padding: 5rem 2rem; }
+    .section-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .section-sub {
+      text-align: center;
+      color: #888;
+      margin-bottom: 3rem;
+      font-size: 1rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: linear-gradient(135deg, var(--pink), var(--lavender));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .card-body { padding: 1.2rem 1.4rem 1.5rem; }
+    .card-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+    .card-body h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .card-body p { font-size: 0.9rem; color: #777; line-height: 1.6; }
+
+    /* WHY US */
+    .why {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 100%);
+      color: white;
+    }
+    .why .section-title { color: white; }
+    .why .section-sub { color: rgba(255,255,255,0.6); }
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .pillar { text-align: center; }
+    .pillar-icon { font-size: 2.8rem; margin-bottom: 1rem; }
+    .pillar h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .pillar p { font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.7; }
+
+    /* CONTACT */
+    .contact-section {
+      background: white;
+      text-align: center;
+    }
+    .contact-box {
+      max-width: 560px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #ffe0ef, #e8d5ff);
+      border-radius: 24px;
+      padding: 3rem 2rem;
+    }
+    .contact-box p { color: #555; margin-bottom: 1.5rem; line-height: 1.7; }
+    .contact-email {
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      background: white;
+      padding: 0.8rem 2rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 20px rgba(255,107,157,0.2);
+      transition: all 0.2s;
+    }
+    .contact-email:hover { background: var(--accent); color: white; }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--pink); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem; }
+      .hero { min-height: 80vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Shop With Nina ✨</div>
+    <div class="nav-contact"><a href="mailto:contact@shopwithnina.uk">Contact Us</a></div>
+  </nav>
+
+  <section class="hero">
+    <span class="floaties">🎀</span>
+    <span class="floaties">💜</span>
+    <span class="floaties">✨</span>
+    <span class="floaties">🌸</span>
+    <div class="hero-badge">✦ New Arrivals for Spring 2025</div>
+    <h1>Hair That <span>Slays</span>,<br/>Vibes That Last 💅</h1>
+    <p>Curated hair accessories for the Gen Z aesthetic — claw clips, scrunchies, Y2K bows and more. Shipped across North America.</p>
+    <div class="hero-btns">
+      <a href="mailto:contact@shopwithnina.uk" class="btn-primary">Shop Now →</a>
+      <a href="#contact" class="btn-secondary">Get In Touch</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Our Vibe ✦</h2>
+    <p class="section-sub">Everything you need to express yourself</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-img">🦋</div>
+        <div class="card-body">
+          <div class="card-tag">Bestseller</div>
+          <h3>Claw Clips</h3>
+          <p>Oversized, mini, butterfly — all the claw clip energy you need for that effortless GRWM look.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">🎀</div>
+        <div class="card-body">
+          <div class="card-tag">Y2K Revival</div>
+          <h3>Satin Scrunchies</h3>
+          <p>Soft, silky, and so aesthetic. Our scrunchies are the vibe whether you're on TikTok or just vibing.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">🌸</div>
+        <div class="card-body">
+          <div class="card-tag">Trending</div>
+          <h3>Ribbon Bows</h3>
+          <p>Double ribbon, single loop, ballet-core — bows that go with literally every outfit.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">💎</div>
+        <div class="card-body">
+          <div class="card-tag">Premium</div>
+          <h3>Rhinestone Pins</h3>
+          <p>Because sometimes you need a little sparkle. Crystal clips and bobby pins for those extra moments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why">
+    <h2 class="section-title">Why Nina? 🌙</h2>
+    <p class="section-sub">We get it — because we live it</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">🚀</div>
+        <h4>Fast North America Shipping</h4>
+        <p>Quick delivery across the US and Canada so your look never waits.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">✨</div>
+        <h4>Trend-Forward Curation</h4>
+        <p>We track TikTok and Pinterest so you always get what's actually trending.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">💜</div>
+        <h4>Quality First</h4>
+        <p>Every piece tested by real people. No more clips that snap or scrunchies that pull.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🌿</div>
+        <h4>Wholesale Friendly</h4>
+        <p>Boutique owner? Influencer? Reach out — we love working with creators and small businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <h2 class="section-title">Let's Connect 💌</h2>
+    <p class="section-sub">Wholesale inquiries, collabs, or just saying hi</p>
+    <div class="contact-box">
+      <p>Whether you're looking to stock your boutique, collab as an influencer, or just want to know more about what we carry — we'd love to hear from you!</p>
+      <a href="mailto:contact@shopwithnina.uk" class="contact-email">contact@shopwithnina.uk</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Shop With Nina · <a href="mailto:contact@shopwithnina.uk">contact@shopwithnina.uk</a> · shopwithnina.uk</p>
+  </footer>
+
+</body>
+</html>
