@@ -22,6 +22,9 @@
       --black: #1a1a1a;
       --gray: #666666;
       --border: #E5E5E5;
+      --lavender: #E6E6FA;
+      --mint: #B0E0E6;
+      --peach: #FFE4E1;
     }
 
     body {
@@ -41,7 +44,7 @@
       display: block;
     }
 
-    /* Header */
+    /* Announcement Bar */
     .announcement-bar {
       background: var(--black);
       color: var(--white);
@@ -52,6 +55,7 @@
       text-transform: uppercase;
     }
 
+    /* Header */
     .header {
       background: var(--white);
       border-bottom: 1px solid var(--border);
@@ -63,14 +67,14 @@
     .header-inner {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .logo img {
-      height: 60px;
+      height: 70px;
       width: auto;
     }
 
@@ -146,6 +150,40 @@
       letter-spacing: 0.05em;
     }
 
+    /* Categories */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .category-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .category-card:hover {
+      border-color: var(--pink);
+      transform: translateY(-3px);
+    }
+
+    .category-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .category-name {
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
     /* Product Grid */
     .product-grid {
       display: grid;
@@ -194,40 +232,6 @@
       font-size: 1.125rem;
       font-weight: 700;
       color: var(--pink);
-    }
-
-    /* Categories */
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 4rem;
-    }
-
-    .category-card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-    }
-
-    .category-card:hover {
-      border-color: var(--pink);
-      transform: translateY(-3px);
-    }
-
-    .category-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .category-name {
-      font-size: 1.125rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
 
     /* Footer */
@@ -349,7 +353,7 @@
   <section class="section" id="new">
     <h2 class="section-title">✹ Just In ✹</h2>
     <div class="product-grid">
-      <!-- Placeholder products - you'll add real images later -->
+      <!-- Placeholder products -->
       <div class="product-card">
         <div class="product-image">
           <div style="width:100%;height:100%;background:linear-gradient(135deg, #FFB6C1, #FFC0CB);"></div>
